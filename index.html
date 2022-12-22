@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            :root {
+                --color-bg: #ead9a7;
+                --color-fg: #212529;
+                --color-muted: #d9b77e;
+                --color-accent: #ba2e26;
+            }
+            @font-face {
+                font-family: Merriweather;
+                src: url(public/Merriweather-Regular.ttf);
+            }
+
+            @font-face {
+                font-family: Iosevka;
+                src: url(public/iosevka-custom-regular.woff2);
+            }
+
+            body {
+                background-color: var(--color-bg);
+                color: var(--color-fg);
+                font-family: Merriweather;
+            }
+
+            h1 {
+                font-family: Iosevka, monospace;
+            }
+
+            hr {
+                border: none;
+                border-top: 1px solid var(--color-muted);
+                overflow: visible;
+                text-align: center;
+            }
+
+            hr:after {
+                background-color: var(--color-bg);
+                content: "◬";
+                content: "⎊";
+                content: "🢗";
+                content: "";
+                font-size: 30px;
+                padding: 0 4px;
+                padding: 0;
+                position: relative;
+                top: -23px;
+            }
+
+            a, a:hover, a:visited, a:active {
+                color: var(--color-accent);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main"></div>
+    </body>
+</html>
+
