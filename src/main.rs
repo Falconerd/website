@@ -3,8 +3,9 @@ use dioxus::{
     router::{Route, Router, Link}
 };
 
-pub use crate::pages::poisson_disk_sampling;
+mod poisson_disk_sampling;
 
+#[allow(non_snake_case)]
 fn PostList(cx: Scope) -> Element {
     let post_links: Vec<(&str, &str)> = vec![("Poisson Disk Sampling and its Uses in Games", "/poisson-disk-sampling")];
 
@@ -15,6 +16,7 @@ fn PostList(cx: Scope) -> Element {
     })
 }
 
+#[allow(non_snake_case)]
 fn HomePage(cx: Scope) -> Element {
     cx.render(rsx!{
         p {
@@ -31,6 +33,7 @@ fn HomePage(cx: Scope) -> Element {
     })
 }
 
+#[allow(non_snake_case)]
 fn ErrorPage(cx: Scope) -> Element {
     cx.render(rsx! { "not found" })
 }
