@@ -1,0 +1,66 @@
+:root {
+    --color-bg: #ead9a7;
+    --color-fg: #212529;
+    --color-muted: #d9b77e;
+    --color-accent: #ba2e26;
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url(public/Merriweather-Regular.ttf);
+}
+
+@font-face {
+    font-family: Iosevka;
+    src: url(public/iosevka-custom-regular.woff2);
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: Merriweather;
+}
+
+#container {
+    max-width: 640px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+main {
+    font-size: 1.1em;
+}
+
+h1 {
+    font-family: Iosevka, monospace;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--color-muted);
+    overflow: visible;
+    text-align: center;
+}
+
+main hr {
+    margin-top: 26px;
+    margin-bottom: -26px;
+}
+
+main hr:after {
+    background-color: var(--color-bg);
+    color: var(--color-muted);
+    content: "";
+    content: "🢗";
+    content: "⎊";
+    content: "◬";
+    font-size: 30px;
+    padding: 0 12px;
+    position: relative;
+    top: -25px;
+}
+
+a, a:hover, a:visited, a:active {
+    color: var(--color-accent);
+}
+
