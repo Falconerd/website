@@ -2,14 +2,15 @@ use dioxus::{
     prelude::*,
     router::{Route, Router, Link}
 };
+use markdown::Markdown;
 
 mod markdown;
 mod poisson_disk_sampling;
 
-use markdown::Markdown;
-
 #[allow(non_snake_case)]
 fn HomePage(cx: Scope) -> Element {
+    //let mut context: CanvasRenderingContext2d = CanvasRenderingContext2d { obj: js_sys::Object::new() };
+
     cx.render(rsx!{
         Markdown { content: include_str!("homepage/intro.md") }
         Markdown { content: include_str!("post_list.md") }
