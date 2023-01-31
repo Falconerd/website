@@ -13,11 +13,9 @@ fn HomePage(cx: Scope) -> Element {
 
     cx.render(rsx!{
         Markdown { content: include_str!("homepage/intro.md") }
-        //hr {}
-        //Markdown { content: include_str!("devlogs/list.md") }
         hr {}
         Markdown { content: include_str!("post_list.md") }
-        //hr {}
+        hr {}
         Markdown { content: include_str!("homepage/outro.md") }
     })
 }
