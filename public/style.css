@@ -31,8 +31,22 @@ main {
     font-size: 1.1em;
 }
 
-h1 {
+#main-header {
     font-family: Iosevka, monospace;
+    font-size: 2em;
+}
+
+h1, h2, h3 {
+    font-family: Iosevka, monospace;
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+h3 {
+    font-size: 1.2em;
 }
 
 hr {
