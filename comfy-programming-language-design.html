@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Designing A Comfy Programming Language</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <meta name="keywords" content="Programming, Gamedev" />
+  <meta name="description" content="Programming Games and stuff" />
+  <link rel="stylesheet" href="public/style.css" />
+</head>
+<body>
+<div id="container">
+<header id="main-header">
+    <a href="/index.html">Dylan Falconer's Website</a>
+    <hr />
+</header>
+<main>
+<header id="title-block-header">
+<h1 class="title">Designing A Comfy Programming Language</h1>
+<p class="subtitle">2023-25-02</p>
+</header>
+<p>What is it that programmers really want out of a language? For myself, it’s <strong>ease of use</strong> and <strong>compilation speed</strong>.</p>
+<p>In this article I will cover Rust, Zig, and C to show how they fail to meet my requirements.</p>
+<h2 id="ease-of-use">Ease Of Use</h2>
+<p>Ease of use covers a broad range of topics such as:</p>
+<ul>
+<li>Installing a language.</li>
+<li>Compiling a program with it.</li>
+<li>The tooling surrounding it.</li>
+<li>How useful the Standard Library is.</li>
+<li>And more…</li>
+</ul>
+<p>Of course the language itself should be straightforward and have features that are obviously the correct ones to use for a particular problem.</p>
+<p>The second most important skill for a programmer after problem solving is writing readable code. If nobody after you - or your future self - cannot easily read your code it will bring development to a stand-still.</p>
+<h2 id="rust">Rust</h2>
+<p>Rust is the newest language I have picked up, and it’s the closest to my ideal for ease-of-use, I am suspicious of the npm-like package management that is going on.</p>
+<p>While writing this article, I decided to upgrade the website. It was running on a Rust framework called Dioxus v0.2. The migration process was horrible because the devs pushed out v0.3 with breaking changes and no update to the documentation (this has nothing to do with Rust itself, it was just shit).</p>
+<p>and is now just Markdown files + a shell script.</p>
+<pre><code>sum = fn(x: number, y: number) -&gt; number {
+        return x + y
+}</code></pre>
+<p>I’m no stranger to switching languages, in <a href="#">my last post</a> I told a story about how I switched between five languages on my current game project.</p>
+</main>
+<footer>
+    <hr />
+    <a href="https://ko-fi.com/falconerd">Support me on Ko-Fi</a>
+</footer>
+</div>
+</body>
+</html>

@@ -7,12 +7,12 @@
 
 @font-face {
     font-family: Merriweather;
-    src: url(public/Merriweather-Regular.ttf);
+    src: url(Merriweather-Regular.ttf);
 }
 
 @font-face {
     font-family: Iosevka;
-    src: url(public/iosevka-custom-regular.woff2);
+    src: url(iosevka-regular.ttf);
 }
 
 body {
@@ -65,9 +65,9 @@ main hr:after {
     background-color: var(--color-bg);
     color: var(--color-muted);
     content: "";
-    content: "🢗";
-    content: "⎊";
-    content: "◬";
+    content: "ðŸ¢—";
+    content: "âŽŠ";
+    content: "â—¬";
     font-size: 30px;
     padding: 0 12px;
     position: relative;
@@ -76,5 +76,9 @@ main hr:after {
 
 a, a:hover, a:visited, a:active {
     color: var(--color-accent);
+}
+
+footer {
+    text-align: center;
 }
 

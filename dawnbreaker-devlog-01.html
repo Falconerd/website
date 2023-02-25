@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>The Game Idea That Took Up Residence In My Mind - Dawnbreaker devlog #1</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <meta name="keywords" content="Programming, Gamedev" />
+  <meta name="description" content="Programming Games and stuff" />
+  <link rel="stylesheet" href="public/style.css" />
+</head>
+<body>
+<div id="container">
+<header id="main-header">
+    <a href="/index.html">Dylan Falconer's Website</a>
+    <hr />
+</header>
+<main>
+<header id="title-block-header">
+<h1 class="title">The Game Idea That Took Up Residence In My Mind - Dawnbreaker devlog #1</h1>
+<p class="subtitle">2023-01-02</p>
+</header>
+<p>Have you ever had an idea worm its way into your mind and refuse to leave?</p>
+<center>
+<img src="/public/dawnbreaker_2023_02_01.png" alt="Dawnbreaker today (written in Rust)" /> <br /> <i>Dawnbreaker today (written in Rust)</i>
+</center>
+<p>That’s what happened to me back in 2019 when I was playing Minecraft and came across a mod called <a href="https://psi.vazkii.net">Psi</a> - created by Vazkii; also the author of Botania.</p>
+<p>Psi has a spell crafting grid that is used to create <em>Tricks</em> that can be loaded into a cartridge and fired with a gun. These <em>Tricks</em> can be extremely complex, with varying effects ranging from simply damaging an enemy to automatically building structures. They are like macros for a bunch of stuff you may want to do in Minecraft.</p>
+<center>
+<img src="/public/psi_grid.png" alt="Psi's spell crafting grid" /> <br /> <i>Psi’s spell crafting grid</i>
+</center>
+<p>It looks complicated, especially due to Minecraft’s icon size limitations. It’s basically visual scripting.</p>
+<p>When playing with this mod, I thought it’d be cool if games like Final Fantasy XII or Dragon Age Origins - which have auto-battle mechanics, had something as complex as this for their AI.</p>
+<h2 id="the-premise">The premise</h2>
+<p>A tactics auto-battler game in which the player characters must have their behaviour programmed before battle.</p>
+<p>The tactics for a party member is programmed by the player. The tactics grid consists of a number of pieces that can be connected via matching input and output types.</p>
+<p>For example, the “Max HP” piece takes one parameter, a Unit and outputs a Number - the maximum health of the unit that was given.</p>
+<p>Each party member can have three active tactics grids at a time, and there are special pieces to switch between grids.</p>
+<p>You play as a fixer - someone who sets up and pulls off high stakes jobs like heists - in a cyberpunk future.</p>
+<h2 id="the-joruney-thus-far">The joruney thus far</h2>
+<p>The path from the conception of the idea to today is labyrinthine and spans five programming languages (C#, Elm, C, Zig, Rust) and many more failed attempts.</p>
+<p>Wanting to scratch my own itch, I jumped in the deep end in late 2019. It was smooth sailing in the beginning and I soon had a console-only (as in CLI) prototype written in C# up and running, simulating battles.</p>
+<p>Unfortunately, I don’t have any builds or screenshots from that time, but since it was a text user interface, there would be not much to show.</p>
+<p>When the notion of adding graphics came up, I considered using Unity. Being a dumb hipster, I decided that was too mainstream and I wanted to learn something new. I had been hearing about this thing called “Functional Programming” and since I was working as a web developer - decided to use Elm.</p>
+<p>I got the tactics screen implemented with a hex grid, a simple town screen and that’s about it.</p>
+<center>
+<img src="/public/x.png" alt="Dawnbreaker's Elm version" /> <br /> <i>Tactics screen in the Elm version</i>
+</center>
+<p>As you can see, I opted for a hexagonal grid rather than a square one like Psi. Hexagons look nice and it gives an oppourtunity for any pieces that have more than three parameters to exist.</p>
+<h2 id="the-first-stop-of-production">The first stop of production</h2>
+<p>It’s hard to remember exactly why, but I changed my mind and went to Unity after this. However, Unity was - at the time - not that great for pixel art, and had a bunch of usability issues that left me sour about using it pretty quickly.</p>
+<p>The project would sit untouched for about a year.</p>
+<h2 id="the-gamejam-version---in-c-this-time">The gamejam version - in C this time</h2>
+<center>
+<img src="public/CARMUD.png" alt="GameJam version" /> <br /> <i>Game jam version mockup</i>
+</center>
+<p>At some point in 2020 I decided that I wanted to learn “real” programming and started learning C. That’s also when I started <a href="https://youtube.com/@DylanFalconer0">my YouTube channel</a> about programming.</p>
+<p>After some months of learning C and OpenGL, I decided to enter a gamejam and test my skills.</p>
+<p>I entered the One-Month Turn-Based Jam and submitted <a href="https://falconerd.itch.io/auto-battle-tactics">a working (albeit unpolished) version</a> of the tactics and a battle.</p>
+<h2 id="the-first-c-attempt">The first C attempt</h2>
+<p>After the jam, I decided to build out the game for real. I took some bits of the code from the jam (it is very messy - it’s included in the zip when you download the game) and got started.</p>
+<p>It wasn’t too long before I got sick of segfaults and thought that perhaps I’m not good enough to use a language like C.</p>
+<h2 id="the-first-zig-attempt">The first Zig attempt</h2>
+<p>Alright, Zig! A low-ish level language that has manual memory management but isn’t so esoteric!</p>
+<p>After some weeks or months working in Zig, I decided that “actually… I should learn C properly - using Zig is just a crutch for my lack of knowledge”.</p>
+<p>This is when I started buying books like K&amp;R and Computer Systems: A Programmer’s Perspective.</p>
+<p>I didn’t make it very far through these books - I still plan to, I just haven’t set aside the time.</p>
+<p>Regardless, my mindest was now that I should stop using the crutch that is Zig, and switch back to C.</p>
+<h2 id="the-second-c-attempt">The second C attempt</h2>
+<p>I busied myself implementing a bunch of parsing code for custom data types, getting lost in the minutiae of pretty much everything.</p>
+<p>It wasn’t long before the annoyances of certain missing features lead me back to Zig.</p>
+<h2 id="the-second-zig-attempt">The second Zig attempt</h2>
+<p>And so I found myself back at Zig.</p>
+<p>You may notice that the past four versions don’t have any screenshots.</p>
+<p>This is because I was spending all my time doing pointless re-implementations of things I had already done.</p>
+<p>The rationalisation-engine in my brain was at full-steam.</p>
+<p>Each of these four attempts were on-and-off - my work ethic was abysmal.</p>
+<p>There was an outside chance this project would ever see the light of day.</p>
+<h2 id="where-are-we-now">Where are we now?</h2>
+<p>Today, the engine has been re(-re-re-re-re…)-written in Rust and the scope of features is similar to the Elm version from 2019.</p>
+<p>There are some cool things about how the engine all fits together that I think would make interesting topics - so I’ll be posting about those.</p>
+<p>This is the first of weekly devlogs until the game ships and beyond.</p>
+<p>I hope you can use this train-wreck as a cautionary tale. Thank you for reading, and see you soon.</p>
+<p>You can discuss this article on <a href="https://twitter.com/falconerd_/status/1620469081064501248?s=20&amp;t=ChPyZyzoqejC3-p5c7QFMw">Twitter</a>.</p>
+</main>
+<footer>
+    <hr />
+    <a href="https://ko-fi.com/falconerd">Support me on Ko-Fi</a>
+</footer>
+</div>
+</body>
+</html>

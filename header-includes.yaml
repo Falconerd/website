@@ -1,0 +1,6 @@
+---
+header-includes:
+    <meta name="keywords" content="Programming, Gamedev" />
+    <meta name="description" content="Programming Games and stuff" />
+    <link rel="stylesheet" href="public/style.css" />
+---
