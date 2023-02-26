@@ -3,19 +3,19 @@ title: Designing A Comfy Programming Language
 subtitle: 2023-25-02
 ---
 
-What is it that programmers really want out of a language? For myself, it's **ease of use** and **compilation speed**.
+What is it that programmers really want out of a language? For myself, the most important aspect is **ease-of-use**.
 
-In this article I will cover Rust, Zig, and C to show how they fail to meet my requirements.
+An ideal language has the following attributes to make it easy to use:
 
-## Ease Of Use
-
-Ease of use covers a broad range of topics such as:
-
-- Installing a language.
-- Compiling a program with it.
-- The tooling surrounding it.
-- How useful the Standard Library is.
-- And more...
+<dl>
+    <dt><strong>Simple installation</strong></dt><dd>Simply download a binary or install a package.</dd>
+    <dt><strong>Fast compilation</strong></dt><dd>Quick turn-around time when programming is valuable.</dd>
+    <dt><strong>Lack of footguns</strong></dt><dd>It should be difficult to have errors (besides logic errors).</dd>
+    <dt><strong>Expected outcomes</strong></dt><dd>When you type a statement or expression, there should be no surprises about what it does.</dd>
+    <dt><strong>Good tooling</strong></dt><dd>A Treesitter plugin or LSP is nice to have.</dd>
+    <dt><strong>Useful Standard Library</strong></dt><dd>Having useful data structures and procedures in the standard library makes programming less tedious.</dd>
+    <dt><strong>And more...</strong></dt>
+</dl>
 
 Of course the language itself should be straightforward and have features that are obviously the correct ones to use for a particular problem.
 

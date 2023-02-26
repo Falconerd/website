@@ -3,6 +3,9 @@ title: The Game Idea That Took Up Residence In My Mind - Dawnbreaker devlog \#1
 subtitle: 2023-01-02
 ---
 
+<center>
+    [Watch or listen to the video version of this article](https://www.youtube.com/watch?v=TOmmutd6rTw)
+</center>
 Have you ever had an idea worm its way into your mind and refuse to leave?
 
 <center>

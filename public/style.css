@@ -2,7 +2,10 @@
     --color-bg: #ead9a7;
     --color-fg: #212529;
     --color-muted: #d9b77e;
-    --color-accent: #ba2e26;
+    --color-accent: #aa1e16;
+    --font-body: Merriweather, serif;
+    --font-headings: Noto Sans, Noto Sans CJK KR, sans-serif;
+    --font-code: Iosevka, monospace;
 }
 
 @font-face {
@@ -18,7 +21,7 @@
 body {
     background-color: var(--color-bg);
     color: var(--color-fg);
-    font-family: Merriweather;
+    font-family: var(--font-body);
 }
 
 #container {
@@ -28,17 +31,21 @@ body {
 }
 
 main {
-    font-size: 1.1em;
+    font-size: 1em;
+    line-height: 1.5;
 }
 
 #main-header {
-    font-family: Iosevka, monospace;
+    font-family: var(--font-headings);
     font-size: 2em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 h1, h2, h3 {
-    font-family: Iosevka, monospace;
+    font-family: var(--font-headings);
     font-size: 1.5em;
+    text-decoration: underline;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 h2 {
@@ -82,3 +89,21 @@ footer {
     text-align: center;
 }
 
+code {
+    font-family: var(--font-code);
+}
+
+#bio {
+    display: flex;
+    gap: 16px;
+}
+
+@media (max-width: 500px) and (orientation: portrait) {
+    #bio {
+        display: block;
+        text-align: center;
+    }
+    #bio p {
+        text-align: left;
+    }
+}
